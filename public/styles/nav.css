@@ -8,6 +8,7 @@ nav {
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
+  top: 0;
 }
 
 .right {
@@ -17,6 +18,10 @@ nav {
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
   color: #FFFFFF;
+}
+
+.logo {
+
 }
 
 nav span{

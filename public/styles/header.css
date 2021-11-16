@@ -9,5 +9,12 @@ header {
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
   color: #FFFFFF;
+  
 
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
