@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
     <!-- FONT AWESOME LIBRARY -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
     <!-- Fonts - Bungee & Source Sans Pro -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- new-tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- tweet-feed CSS -->
+    <link rel="stylesheet" href="/styles/feed.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,11 +44,11 @@
       </div>
       <div class="right-nav">
         <span>Write a new tweet</span>
-        <i class="fas fa-angle-double-down"></i>
+        <i id="iconv" class="fas fa-angle-double-down" style="font-size: 2.5em"></i>
       </div>
     </nav>
-    <header>
-      <div class="avatar-container">
+    <header class="avatar-container">
+      <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
@@ -67,6 +69,24 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="feed">
+        <article>
+          <header class="feed-header">
+            <i id="icon-avatar" class="fas fa-user-astronaut" style="font-size: 4em"></i>
+            <span class="avatar-name">John Lenon</span>
+            <span class="user-name">@toTheMoon</span>
+          </header>
+          <div class="feed-description">Hello World!</div>
+          <footer class="feed-footer">
+            <span class="days-counter">10 days ago</span>
+            <div class="feed-icons">
+              <i id="icon-flag" class="fas fa-flag" style="font-size: 1em"></i>
+              <i id="icon-retweet" class="fas fa-retweet" style="font-size: 1em"></i>
+              <i id="icon-heart" class="fas fa-heart" style="font-size: 1em"></i>
+            </div>
+          </footer>
+        </article>
       </section>
    </main>
   </body>

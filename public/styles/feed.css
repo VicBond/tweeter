@@ -1,0 +1,73 @@
+.feed {
+  border-color: black;
+  border-style: solid;
+  padding:1.6em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+  }
+
+.feed-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.avatar-name {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  padding-right: 5em;
+  
+}
+
+.user-name {
+  color: rgba(67, 82, 118, 0.405);
+}
+
+.feed-description {
+  border-color: black;
+  border-bottom: solid;
+  padding: 1em;
+  padding-left: 0.1em;
+  padding-top: 2em;
+  width: 100%;
+}
+
+.feed-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+.feed:hover {
+  box-shadow: 7px 7px 1px 1px grey;
+}
+
+#icon-avatar:hover {
+  visibility: visible;
+  color: #505c99;
+}
+
+#icon-flag:hover {
+  visibility: visible;
+  color: rgb(0, 21, 255);
+}
+
+#icon-retweet:hover {
+  visibility: visible;
+  color: rgb(55, 255, 0);
+}
+
+#icon-heart:hover {
+  visibility: visible;
+  color: rgb(255, 0, 0);
+}
+
+/* .feed-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+} */
+
