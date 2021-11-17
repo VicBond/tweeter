@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const tweetData = [
   {
     "user": {
@@ -25,6 +26,7 @@ const tweetData = [
 
 
 const createTweetElement = function(tweet) {
+  const timeAgo = timeago.format(new Date(tweet.created_at));
   const $tweet = `
   <article id="tweet-container">
   <header class="feed-header">
@@ -34,7 +36,7 @@ const createTweetElement = function(tweet) {
   </header>
   <div class="feed-content">${tweet.content.text}</div>
   <footer class="feed-footer">
-  <span class="days-counter">${tweet.created_at}</span>
+  <span class="days-counter">${timeAgo}</span>
   <div class="feed-icons">
   <i id="icon-flag" class="fas fa-flag" style="font-size: 1em"></i>
   <i id="icon-retweet" class="fas fa-retweet" style="font-size: 1em"></i>
