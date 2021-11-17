@@ -54,6 +54,10 @@ $(document).ready(function() {
   $("form").submit("submit", function(event) {
     event.preventDefault();
     const str = $(this).serialize();
+    const input = $("#tweet-text").val();
+    if (!input || input.length > 140) {
+      return alert("No empty tweets please and no more than 140 characters, Jack Dorsey said so.");
+    }
     $.ajax({
       method: "POST",
       url: "/tweets",
