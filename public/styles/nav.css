@@ -1,5 +1,7 @@
 nav {
   display: flex;
+  position: fixed;
+  overflow: hidden;
   height: 120px;
   width: 100%;
   flex-direction: row;
