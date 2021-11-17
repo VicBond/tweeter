@@ -51,6 +51,17 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
   renderTweets(tweetData);
+  $("form").submit("submit", function(event) {
+    event.preventDefault();
+    const str = $(this).serialize();
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: str
+    }).then(function() {
+      console.log("POST request sent");
+    });
+  });
 });
 
 const renderTweets = function(tweets) {
@@ -58,4 +69,3 @@ const renderTweets = function(tweets) {
     $('#feed').append(createTweetElement(tweet));
   }
 };
-
