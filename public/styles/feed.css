@@ -1,10 +1,10 @@
-.feed {
+#tweet-container {
   border-color: black;
   border-style: solid;
-  padding:1.6em;
+  padding:1em;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   }
 
 .feed-header {
@@ -17,7 +17,7 @@
   display: flex;
   align-self: flex-start;
   justify-content: space-between;
-  padding-right: 5em;
+  padding-right: 15em;
   
 }
 
@@ -25,7 +25,7 @@
   color: rgba(67, 82, 118, 0.405);
 }
 
-.feed-description {
+.feed-content {
   border-color: black;
   border-bottom: solid;
   padding: 1em;
@@ -41,13 +41,8 @@
   padding-top: 1em;
 }
 
-.feed:hover {
+#tweet-container:hover {
   box-shadow: 7px 7px 1px 1px grey;
-}
-
-#icon-avatar:hover {
-  visibility: visible;
-  color: #505c99;
 }
 
 #icon-flag:hover {
