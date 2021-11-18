@@ -3,6 +3,11 @@
 
 
 $(document).ready(function() {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const tweetData = [];
 
@@ -15,7 +20,7 @@ $(document).ready(function() {
   <span class="avatar-name">${tweet.user.name}</span>
   <span class="user-name">${tweet.user.handle}</span>
   </header>
-  <div class="feed-content">${tweet.content.text}</div>
+  <div class="feed-content">${escape(tweet.content.text)}</div>
   <footer class="feed-footer">
   <span class="days-counter">${timeAgo}</span>
   <div class="feed-icons">
