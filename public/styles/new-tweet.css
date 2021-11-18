@@ -27,3 +27,13 @@
   background-color: #505c99;
   color: #FFFFFF;
 }
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 21px;
+  color: rgb(255, 0, 0);
+  margin-top: 2em;
+}

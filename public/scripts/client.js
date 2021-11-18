@@ -46,8 +46,12 @@ $(document).ready(function() {
     event.preventDefault();
     const str = $(this).serialize();
     const input = $("#tweet-text").val();
+    $(".error-message").hide();
+    $('.error-message').slideUp(200);
     if (!input || input.length > 140) {
-      return alert("No empty tweets please and no more than 140 characters, Jack Dorsey said so.");
+      $('.error-message').slideDown(400);
+      $('.error-message').text("🚫 No empty tweets please and no more than 140 characters, Jack Dorsey said so.");
+      return;
     }
     $.ajax({
       method: "POST",
