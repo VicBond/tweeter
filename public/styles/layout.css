@@ -52,7 +52,7 @@ body {
    }
    .avatar-container {
     margin: 1em;
-  
+    border-radius: 25px;
    }
 } 
 

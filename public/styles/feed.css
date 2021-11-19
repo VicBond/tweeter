@@ -1,6 +1,7 @@
 #tweet-container {
   border-color: black;
   border-style: solid;
+  border-radius: 25px;
   padding:1em;
   display: flex;
   flex-direction: column;
