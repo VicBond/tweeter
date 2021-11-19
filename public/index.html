@@ -37,6 +37,8 @@
     <!-- Timeago JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
+    <!-- Disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
@@ -46,27 +48,26 @@
         <span>tweeter</span>
       </div>
       <div class="right-nav">
-        <span>Write a new tweet</span>
-        <i id="iconv" class="fas fa-angle-double-down" style="font-size: 2.5em"></i>
+        <span id="right-nav-text"><strong>Write</strong> a new tweet</span>
+        <i id="iconv" class="fas fa-angle-double-down" style="font-size: 1em"></i>
       </div>
     </nav>
+    <div class="container">
     <header class="avatar-container">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div>
-          <h2>Elon Musk</h2>
+          <h2>Paranoid Android</h2>
       </div>
   </header>
   
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="main-container">
       <section class="new-tweet">
         <div class="error-message"></div>
-        <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST" content-type="application/x-www-form-urlencoded">
-          <label for="tweet-text">What are you humming about?</label>
+          <label class="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class ="submit-tweet">
             <button type="submit">Tweet</button>
@@ -77,5 +78,6 @@
       <section id="feed">
       </section>
    </main>
+   </div>
   </body>
 </html>

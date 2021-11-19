@@ -1,7 +1,5 @@
 .avatar-container {
   display: flex;
-  height: 400px;
-  width: 100%;
   background-color: #505c99;
   background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   flex-direction: column;
@@ -9,11 +7,9 @@
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
   color: #FFFFFF;
-  
-}
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 
-.avatar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }

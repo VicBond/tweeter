@@ -1,17 +1,16 @@
-.new-tweet {
+form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.new-tweet textarea {
+textarea {
   width: 100%;
   background-color: #f4f1ec;
   font-weight: bold;
   border: none;
-  border-bottom-style: solid;
-
-  
+  border-bottom-style: solid;  
 }
 
 .submit-tweet {
@@ -19,8 +18,8 @@
   justify-content: space-between;
   width: 100%;
   font-family: 'Bungee', cursive;
-  padding-top: 10px;
-  padding-bottom: 2.5em;
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
 
 .new-tweet button {

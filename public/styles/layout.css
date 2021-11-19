@@ -27,11 +27,32 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.container {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
+ .container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   
+
+  }
+ 
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  
+  }
+ @media only screen and (min-width: 1024px) {
+   .container{
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: center;
+     padding: 2em;
+     
+  
+   }
+   .avatar-container {
+    margin: 1em;
+  
+   }
+} 
+

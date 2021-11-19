@@ -16,8 +16,10 @@ $(document).ready(function() {
     const $tweet = `
   <article id="tweet-container">
   <header class="feed-header">
+  <div class="feed-name">
   <img src=${tweet.user.avatars}>
   <span class="avatar-name">${tweet.user.name}</span>
+  </div>
   <span class="user-name">${tweet.user.handle}</span>
   </header>
   <div class="feed-content">${escape(tweet.content.text)}</div>

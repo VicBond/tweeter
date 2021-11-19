@@ -13,16 +13,22 @@
   justify-content: space-between;
 }
 
+.feed-name{
+  display: flex;
+  flex-direction: row;
+  
+}
 .avatar-name {
   display: flex;
-  align-self: flex-start;
+  align-self: flex-end;
   justify-content: space-between;
-  padding-right: 15em;
+  padding-bottom: 1em;
   
 }
 
 .user-name {
   color: rgba(67, 82, 118, 0.405);
+  padding-top: .5em;
 }
 
 .feed-content {
