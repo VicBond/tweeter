@@ -16,3 +16,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Tweet compose and tweets on desktop view"](https://github.com/VicBond/tweeter/blob/master/docs/tweet-compose-tweets-desktop.png)
+!["Tweet compose on desktop view"](https://github.com/VicBond/tweeter/blob/master/docs/tweet-compose-desktop.png)
+!["Tweet compose on tablet view"](https://github.com/VicBond/tweeter/blob/master/docs/tweet-compose-tablet.png)
+!["Tweets page on tablet view"](https://github.com/VicBond/tweeter/blob/master/docs/tweets-page-tablet-mode.png)
+
