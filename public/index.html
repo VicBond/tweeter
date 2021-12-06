@@ -64,9 +64,13 @@
   
     <!-- Page-specific (main) content here -->
     <main class="main-container">
-      <section class="new-tweet">
+
+      <section>
         <div class="error-message"></div>
-        <form action="/tweets" method="POST" content-type="application/x-www-form-urlencoded">
+      </section>
+      
+      <section class="new-tweet">
+        <form action="/tweets/" method="POST" content-type="application/x-www-form-urlencoded">
           <label class="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class ="submit-tweet">
@@ -75,9 +79,10 @@
           </div>
         </form>
       </section>
-      <section id="feed">
-      </section>
+      
+      <section id="feed"></section>
+
    </main>
-   </div>
+   
   </body>
 </html>

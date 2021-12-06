@@ -1,15 +1,12 @@
 /* eslint-disable no-undef */
 
-
-
 $(document).ready(function() {
-  const escape = function (str) {
+
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-
-  const tweetData = [];
 
   const createTweetElement = function(tweet) {
     const timeAgo = timeago.format(new Date(tweet.created_at));
@@ -36,22 +33,35 @@ $(document).ready(function() {
     return $tweet;
   };
 
+
   const renderTweets = function(tweets) {
+    $('#feed').empty();
     for (let tweet of tweets) {
-      $('#feed').prepend(createTweetElement(tweet));
+      const $tweet = createTweetElement(tweet);
+      $('#feed').prepend($tweet);
     }
   };
 
-  renderTweets(tweetData);
+  const loadAllTweets = function() {
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function(allTweets) {
+        renderTweets(allTweets);
+      });
+  };
+ 
+  
+  
+  $(".error-message").hide();
+
 
   $("form").submit("submit", function(event) {
     event.preventDefault();
+
     const str = $(this).serialize();
     const input = $("#tweet-text").val();
-    $(".error-message").hide();
-    $('.error-message').slideUp(200);
+
     if (!input || input.length > 140) {
-      $('.error-message').slideDown(400);
+      $('.error-message').slideDown(400).delay(2000).fadeOut(400);
       $('.error-message').text("🚫 No empty tweets please and no more than 140 characters, Jack Dorsey said so.");
       return;
     }
@@ -66,21 +76,7 @@ $(document).ready(function() {
         $('.counter').text(140);
       });
   });
-
-  const loadAllTweets = function() {
-    $.ajax({
-      method: "GET",
-      url: "/tweets",
-      data: JSON
-    })
-      .then(function(data) {
-        $("#tweets-container").empty();
-        renderTweets(data);
-      });
-  };
   loadAllTweets();
-  
- 
 });
 
 
